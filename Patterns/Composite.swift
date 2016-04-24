@@ -11,7 +11,7 @@ import Cocoa
 class Component {}
 
 class Composite : Component {
-    private var children : [Component] = []
+    var children : [Component] = []
 }
 
 class Leaf : Component {}
