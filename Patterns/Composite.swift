@@ -6,8 +6,6 @@
 //  Copyright © 2016 pauljohanneskraft. All rights reserved.
 //
 
-import Cocoa
-
 class Component {}
 
 class Composite : Component {
