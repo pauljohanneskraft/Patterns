@@ -1,13 +1,17 @@
-//
-//  Interpreter.swift
-//  Patterns
-//
-//  Created by Paul Kraft on 31.05.16.
-//  Copyright © 2016 pauljohanneskraft. All rights reserved.
-//
 
-import Cocoa
+private protocol Context {}
 
-class Interpreter: NSObject {
-
+private protocol Expression {
+    func interpret(context: Context)
 }
+
+private protocol NonTerminalExpression : Expression {
+    var expressions : [Expression] { get }
+    func interpret(context: Context)
+}
+
+private protocol TerminalExpression : Expression {
+    func interpret(context: Context)
+}
+
+// see also: Composite Pattern

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0A8ED21CFE4B5900F9ED39 /* Barrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A8ED11CFE4B5900F9ED39 /* Barrier.swift */; };
 		9B12877E1CFDA205006F44B5 /* ChainOfResponsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B12877D1CFDA205006F44B5 /* ChainOfResponsibility.swift */; };
 		9B1287801CFDA23A006F44B5 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B12877F1CFDA23A006F44B5 /* Observer.swift */; };
 		9B1287821CFDA24C006F44B5 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1287811CFDA24C006F44B5 /* Command.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B0A8ED11CFE4B5900F9ED39 /* Barrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Barrier.swift; path = concurrent/Barrier.swift; sourceTree = "<group>"; };
 		9B12877D1CFDA205006F44B5 /* ChainOfResponsibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChainOfResponsibility.swift; path = behavioral/ChainOfResponsibility.swift; sourceTree = "<group>"; };
 		9B12877F1CFDA23A006F44B5 /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Observer.swift; path = behavioral/Observer.swift; sourceTree = "<group>"; };
 		9B1287811CFDA24C006F44B5 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = behavioral/Command.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B0A8ED01CFE4B2400F9ED39 /* concurrent */ = {
+			isa = PBXGroup;
+			children = (
+				9B0A8ED11CFE4B5900F9ED39 /* Barrier.swift */,
+			);
+			name = concurrent;
+			sourceTree = "<group>";
+		};
 		9B1287791CFDA190006F44B5 /* structural */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 		9B5EAD991CC8AC1E00FCEFBA /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				9B0A8ED01CFE4B2400F9ED39 /* concurrent */,
 				9B12877C1CFDA1D2006F44B5 /* behavioral */,
 				9B1287791CFDA190006F44B5 /* structural */,
 				9B12877A1CFDA1B0006F44B5 /* creational */,
@@ -233,6 +244,7 @@
 				9B1287AA1CFDA432006F44B5 /* Prototype.swift in Sources */,
 				9B12879A1CFDA327006F44B5 /* Decorator.swift in Sources */,
 				9B1287881CFDA288006F44B5 /* TemplateMethod.swift in Sources */,
+				9B0A8ED21CFE4B5900F9ED39 /* Barrier.swift in Sources */,
 				9B1287A81CFDA421006F44B5 /* FactoryMethod.swift in Sources */,
 				9B1287941CFDA2EC006F44B5 /* Singleton.swift in Sources */,
 				9B1287841CFDA266006F44B5 /* Interpreter.swift in Sources */,

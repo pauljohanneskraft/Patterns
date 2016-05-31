@@ -6,10 +6,9 @@ private protocol Client {
 private protocol Adapter {
     var adaptee : Adaptee { get }
 }
+
 extension Adapter {
-    func execute() {
-        adaptee.op()
-    }
+    func execute() { adaptee.op() }
 }
 
 private protocol Adaptee {

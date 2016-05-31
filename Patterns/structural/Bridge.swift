@@ -7,7 +7,7 @@ private protocol Abstraction {
     var imp : Implementor { get }
 }
 
-private extension Abstraction {
+extension Abstraction {
     func op() { imp.op() }
 }
 
