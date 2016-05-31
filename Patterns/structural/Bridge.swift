@@ -1,13 +1,16 @@
-//
-//  Bridge.swift
-//  Patterns
-//
-//  Created by Paul Kraft on 31.05.16.
-//  Copyright © 2016 pauljohanneskraft. All rights reserved.
-//
 
-import Cocoa
+private protocol Client {
+    var domain : Abstraction { get }
+}
 
-class Bridge: NSObject {
+private protocol Abstraction {
+    var imp : Implementor { get }
+}
 
+private extension Abstraction {
+    func op() { imp.op() }
+}
+
+private protocol Implementor {
+    func op()
 }

@@ -1,5 +1,5 @@
 
-class Singleton {
-    private(set) var single = Singleton()
+private struct Singleton {
+    private(set) static var single = Singleton()
     private init() {}
 }

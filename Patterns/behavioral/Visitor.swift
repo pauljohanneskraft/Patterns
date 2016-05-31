@@ -1,13 +1,14 @@
-//
-//  Visitor.swift
-//  Patterns
-//
-//  Created by Paul Kraft on 31.05.16.
-//  Copyright © 2016 pauljohanneskraft. All rights reserved.
-//
 
-import Cocoa
+private protocol Visitor {
+    func visit(_ element: VisitorElement)
+}
 
-class Visitor: NSObject {
+private protocol VisitorElement {
+    func accept(_ visitor: Visitor)
+}
 
+extension VisitorElement {
+    func accept(_ visitor: Visitor) {
+        visitor.visit(self)
+    }
 }

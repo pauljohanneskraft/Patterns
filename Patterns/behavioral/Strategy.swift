@@ -1,13 +1,17 @@
-//
-//  Strategy.swift
-//  Patterns
-//
-//  Created by Paul Kraft on 31.05.16.
-//  Copyright © 2016 pauljohanneskraft. All rights reserved.
-//
 
-import Cocoa
-
-class Strategy: NSObject {
-
+private protocol Subject {
+    var strategy : Strategy { get }
 }
+
+extension Subject {
+    func op() {
+        strategy.op()
+    }
+}
+
+private protocol Strategy {
+    func op()
+}
+
+// examples:
+

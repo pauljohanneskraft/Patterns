@@ -1,13 +1,35 @@
-//
-//  Proxy.swift
-//  Patterns
-//
-//  Created by Paul Kraft on 31.05.16.
-//  Copyright © 2016 pauljohanneskraft. All rights reserved.
-//
 
-import Cocoa
+private protocol Subject {
+    func op()
+}
 
-class Proxy: NSObject {
+private protocol Proxy : Subject {
+    var subject : Subject { get }
+}
 
+extension Proxy {
+    func op() {
+        subject.op()
+    }
+}
+
+// example
+// 1 - Cars
+
+private protocol CarProtocol {
+    func drive()
+}
+
+private protocol Car : CarProtocol {
+    init(age: Int, car: CarProtocol)
+    var car : CarProtocol { get }
+    var age : Int { get }
+}
+
+extension Car {
+    func drive() {
+        if age >= 16 {
+            car.drive()
+        }
+    }
 }

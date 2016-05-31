@@ -1,13 +1,20 @@
-//
-//  Prototype.swift
-//  Patterns
-//
-//  Created by Paul Kraft on 31.05.16.
-//  Copyright © 2016 pauljohanneskraft. All rights reserved.
-//
 
-import Cocoa
+private protocol Prototype {
+    func clone() -> Self
+}
 
-class Prototype: NSObject {
+private struct Prototype1 : Prototype {
+    func clone() -> Prototype1 {
+        let s = self
+        // change s ?
+        return s
+    }
+}
 
+private struct Prototype2 : Prototype {
+    func clone() -> Prototype2 {
+        let s = self
+        // change s ?
+        return s
+    }
 }

@@ -1,13 +1,57 @@
-//
-//  TemplateMethod.swift
-//  Patterns
-//
-//  Created by Paul Kraft on 31.05.16.
-//  Copyright © 2016 pauljohanneskraft. All rights reserved.
-//
 
-import Cocoa
+// abstract concept
 
-class TemplateMethod: NSObject {
+private protocol Abstract {
+    func op1()
+    func op2()
+}
 
+extension Abstract {
+    func op() {
+        op1()
+        op2()
+    }
+}
+
+// example 1: Document Application
+
+protocol Document {
+    func open()
+}
+
+private protocol Application {
+    func canOpenFile(_ f: String) -> Bool
+    func createDocument(_ f: String) -> Document
+    func aboutToOpenDocument(_ d: Document)
+}
+
+extension Application {
+    func openDocument(_ f: String) {
+        if (canOpenFile(f)) {
+            let d = createDocument(f)
+            aboutToOpenDocument(d)
+            d.open()
+        }
+    }
+}
+
+
+// example 2: TestCase
+
+private protocol TestCase {
+    func setUp()
+    func runTest() throws
+    func tearDown()
+}
+
+extension TestCase {
+    func run() {
+        setUp()
+        do {
+            try runTest()
+        } catch let e {
+            print(e)
+        }
+        tearDown()
+    }
 }
