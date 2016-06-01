@@ -1,13 +1,74 @@
-//
-//  State.swift
-//  Patterns
-//
-//  Created by Paul Kraft on 31.05.16.
-//  Copyright © 2016 pauljohanneskraft. All rights reserved.
-//
 
-import Cocoa
 
-class State: NSObject {
-
+private protocol State {
+    func op()
 }
+
+private protocol Context {
+    var state : State { get set }
+}
+
+// examples:
+// 1 - Strings
+
+private protocol _State {
+    mutating func writeName(context : inout _Context, name: String)
+}
+
+private struct StateLowerCase : _State {
+    func writeName(context : inout _Context, name: String) {
+        print(name.lowercased())
+        context.state = StateMultipleUpperCase()
+    }
+    
+}
+
+private struct StateMultipleUpperCase : _State {
+    /** Counter local to this state */
+    private var count = 0;
+    
+    mutating func writeName(context : inout _Context, name: String) {
+        print(name.lowercased())
+        context.state = StateMultipleUpperCase()
+        count += 1
+        if(count > 1) {
+            context.state = StateLowerCase()
+        }
+    }
+    
+}
+// The context class has a state variable that it instantiates in an initial state, in this case StateLowerCase. In its method, it uses the corresponding methods of the state object.
+
+private struct _Context {
+    var state : _State
+    
+    init() {
+        state = StateLowerCase()
+    }
+    
+    mutating func writeName(_ name: String) {
+        state.writeName(context: &self, name: name)
+    }
+}
+// The demonstration below shows the usage:
+
+private func demo() {
+    var context = _Context()
+    
+    context.writeName("Monday")
+    context.writeName("Tuesday")
+    context.writeName("Wednesday")
+    context.writeName("Thursday")
+    context.writeName("Friday")
+    context.writeName("Saturday")
+    context.writeName("Sunday")
+}
+
+
+
+
+
+
+
+
+
