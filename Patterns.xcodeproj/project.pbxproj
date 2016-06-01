@@ -157,10 +157,10 @@
 		9B5EAD991CC8AC1E00FCEFBA /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
-				9B0A8ED01CFE4B2400F9ED39 /* concurrent */,
 				9B12877C1CFDA1D2006F44B5 /* behavioral */,
-				9B1287791CFDA190006F44B5 /* structural */,
+				9B0A8ED01CFE4B2400F9ED39 /* concurrent */,
 				9B12877A1CFDA1B0006F44B5 /* creational */,
+				9B1287791CFDA190006F44B5 /* structural */,
 				9B5EAD9A1CC8AC1E00FCEFBA /* main.swift */,
 			);
 			path = Patterns;
