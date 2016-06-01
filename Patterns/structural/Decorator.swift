@@ -6,84 +6,77 @@ private protocol _Component {
 private protocol Component : _Component {
     func op()
 }
-/*
-private
-public abstract class Spielfigur
-{
-    public abstract void Drohe();
+
+// examples:
+// 1 - Game
+
+private protocol Token {
+    func threaten()
 }
 
-public class Monster : Spielfigur
-{
-    public override void Drohe()
-    {
-    Console.WriteLine("Grrrrrrrrrr.");
-    }
-}
-
-public abstract class Dekorierer : Spielfigur
-{
-    private Spielfigur meineFigur;
-    
-    public Dekorierer(Spielfigur s)
-    {
-    meineFigur = s;
-    }
-    
-    public override void Drohe()
-    {
-    meineFigur.Drohe();
+private struct Monster : Token {
+    func threaten() {
+        print("Grrrrrr.")
     }
 }
 
-public class HustenDekorierer : Dekorierer
-{
-    public HustenDekorierer(Spielfigur s)
-    : base(s)
-    { }
-    
-    public override void Drohe()
-    {
-    Console.Write("Hust, hust. ");
-    base.Drohe();
+private protocol Decorator : Token {
+    var token : Token { get }
+}
+
+extension Decorator {
+    func threaten() {
+        token.threaten()
     }
 }
 
-public class SchnupfenDekorierer : Dekorierer
-{
-    public SchnupfenDekorierer(Spielfigur s)
-    : base(s)
-    { }
+private struct CoughingDecorator : Decorator {
+    var token: Token
     
-    public override void Drohe()
-    {
-    Console.Write("Schniff. ");
-    base.Drohe();
+    init(token: Token) {
+        self.token = token
+    }
+    
+    func threaten() {
+        print("cough, cough. ")
+        token.threaten()
     }
 }
 
-public class ClientCode
-{
-    public static void Main()
-    {
-    Spielfigur meinMonster = new Monster();
-    meinMonster.Drohe();
+private struct SniffingDecorator : Decorator {
+    var token: Token
     
-    Spielfigur meinVerhustetesMonster = new HustenDekorierer(meinMonster);
-    meinVerhustetesMonster.Drohe();
-    
-    Spielfigur meinVerschnupftesMonster = new SchnupfenDekorierer(meinMonster);
-    meinVerschnupftesMonster.Drohe();
-    
-    Spielfigur meinVerschnupftesVerhustetesMonster = new SchnupfenDekorierer(new HustenDekorierer(meinMonster));
-    meinVerschnupftesVerhustetesMonster.Drohe();
-    
-    Spielfigur meinVerhustetesVerschnupftesMonster = new HustenDekorierer(new SchnupfenDekorierer(meinMonster));
-    meinVerhustetesVerschnupftesMonster.Drohe();
+    init(token: Token) {
+        self.token = token
     }
-}*/
+    
+    func threaten() {
+        print("sniff.")
+        token.threaten()
+    }
+}
 
+private func decoratorDemo1() {
+    let monster = Monster()
+    monster.threaten()
+    
+    let coughingMonster = CoughingDecorator(token: monster)
+    coughingMonster.threaten()
+    
+    let sniffingMonster = SniffingDecorator(token: monster)
+    sniffingMonster.threaten()
+    
+    let sniffingCoughingMonster = SniffingDecorator(token: CoughingDecorator(token: monster))
+    sniffingCoughingMonster.threaten()
+    
+    let coughingSniffingMonster = CoughingDecorator(token: SniffingDecorator(token: monster))
+    coughingSniffingMonster.threaten()
+}
 
+func decoratorDemo() {
+    print("Demo 1: Monsters")
+    decoratorDemo1()
+}
 
 
 

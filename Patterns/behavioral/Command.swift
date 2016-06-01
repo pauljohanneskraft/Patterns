@@ -67,28 +67,25 @@ private struct Switch: SwitchType {
     var history = [_Command]()
 }
 
-private func demo(args: [String]) {
+private func commandDemo1(_ args: [String]) {
     
     let lamp = Light()
     let switchUp = FlipUpCommand(lamp)
     let switchDown = FlipDownCommand(lamp)
     var mySwitch = Switch();
     
-    switch(args[0]) {
-    case "ON":
-        mySwitch.storeAndExecute(cmd: switchUp)
-        break
-    case "OFF":
-        mySwitch.storeAndExecute(cmd: switchDown)
-        break
-    default:
-        break
+    for v in args {
+             if v == "ON"  { mySwitch.storeAndExecute(cmd: switchUp  ) }
+        else if v == "OFF" { mySwitch.storeAndExecute(cmd: switchDown) }
+             else { return }
     }
-    
 }
 
 
-
+func commandDemo() {
+    print("Demo 1: Light")
+    commandDemo1(["ON", "OFF", "ON", "OFF", "OFF", "ON", "ON", "OFF", "STOP"])
+}
 
 
 
