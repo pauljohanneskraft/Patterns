@@ -1,8 +1,8 @@
 
 private protocol Component {}
 
-private struct Composite {
+private protocol Composite : Component {
     var children = [Component]()
 }
 
-private struct Leaf : Component {}
+private protocol Leaf : Component {}
