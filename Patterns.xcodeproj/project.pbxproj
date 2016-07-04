@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B0A8ED21CFE4B5900F9ED39 /* Barrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A8ED11CFE4B5900F9ED39 /* Barrier.swift */; };
+		9B0A8ED61CFEF9D600F9ED39 /* StateSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A8ED51CFEF9D600F9ED39 /* StateSingleton.swift */; };
 		9B12877E1CFDA205006F44B5 /* ChainOfResponsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B12877D1CFDA205006F44B5 /* ChainOfResponsibility.swift */; };
 		9B1287801CFDA23A006F44B5 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B12877F1CFDA23A006F44B5 /* Observer.swift */; };
 		9B1287821CFDA24C006F44B5 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1287811CFDA24C006F44B5 /* Command.swift */; };
@@ -31,7 +32,15 @@
 		9B1287A81CFDA421006F44B5 /* FactoryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1287A71CFDA420006F44B5 /* FactoryMethod.swift */; };
 		9B1287AA1CFDA432006F44B5 /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1287A91CFDA432006F44B5 /* Prototype.swift */; };
 		9B1287AC1CFDA444006F44B5 /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1287AB1CFDA444006F44B5 /* AbstractFactory.swift */; };
+		9B583D1B1CFF7C5C009A8162 /* TestBehavioral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B583D1A1CFF7C5C009A8162 /* TestBehavioral.swift */; };
+		9B583D271CFF7C66009A8162 /* TestConcurrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B583D261CFF7C66009A8162 /* TestConcurrent.swift */; };
+		9B583D331CFF7C72009A8162 /* TestCreational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B583D321CFF7C72009A8162 /* TestCreational.swift */; };
 		9B5EAD9B1CC8AC1E00FCEFBA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EAD9A1CC8AC1E00FCEFBA /* main.swift */; };
+		9B92BDAD1CFF2B1400032E6D /* FixedLengthArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92BDAC1CFF2B1400032E6D /* FixedLengthArrays.swift */; };
+		9B92D6951CFF710400953309 /* TestStructural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92D6941CFF710400953309 /* TestStructural.swift */; };
+		9B92E7791CFF72040095D7DB /* TestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92E7781CFF72040095D7DB /* TestAdapter.swift */; };
+		9B92E77B1CFF723B0095D7DB /* TestBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92E77A1CFF723B0095D7DB /* TestBridge.swift */; };
+		9B92E77D1CFF724B0095D7DB /* TestComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92E77C1CFF724B0095D7DB /* TestComposite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		9B0A8ED11CFE4B5900F9ED39 /* Barrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Barrier.swift; path = concurrent/Barrier.swift; sourceTree = "<group>"; };
+		9B0A8ED51CFEF9D600F9ED39 /* StateSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateSingleton.swift; path = behavioral/StateSingleton.swift; sourceTree = "<group>"; };
 		9B12877D1CFDA205006F44B5 /* ChainOfResponsibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChainOfResponsibility.swift; path = behavioral/ChainOfResponsibility.swift; sourceTree = "<group>"; };
 		9B12877F1CFDA23A006F44B5 /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Observer.swift; path = behavioral/Observer.swift; sourceTree = "<group>"; };
 		9B1287811CFDA24C006F44B5 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = behavioral/Command.swift; sourceTree = "<group>"; };
@@ -71,12 +81,56 @@
 		9B1287A71CFDA420006F44B5 /* FactoryMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FactoryMethod.swift; path = creational/FactoryMethod.swift; sourceTree = "<group>"; };
 		9B1287A91CFDA432006F44B5 /* Prototype.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Prototype.swift; path = creational/Prototype.swift; sourceTree = "<group>"; };
 		9B1287AB1CFDA444006F44B5 /* AbstractFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AbstractFactory.swift; path = creational/AbstractFactory.swift; sourceTree = "<group>"; };
+		9B583D181CFF7C5C009A8162 /* TestBehavioral.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestBehavioral.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B583D1A1CFF7C5C009A8162 /* TestBehavioral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBehavioral.swift; sourceTree = "<group>"; };
+		9B583D1C1CFF7C5C009A8162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B583D241CFF7C66009A8162 /* TestConcurrent.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestConcurrent.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B583D261CFF7C66009A8162 /* TestConcurrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConcurrent.swift; sourceTree = "<group>"; };
+		9B583D281CFF7C66009A8162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B583D301CFF7C72009A8162 /* TestCreational.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCreational.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B583D321CFF7C72009A8162 /* TestCreational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCreational.swift; sourceTree = "<group>"; };
+		9B583D341CFF7C72009A8162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B5EAD971CC8AC1E00FCEFBA /* Patterns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Patterns; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5EAD9A1CC8AC1E00FCEFBA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9B92BDAC1CFF2B1400032E6D /* FixedLengthArrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedLengthArrays.swift; sourceTree = "<group>"; };
+		9B92D6921CFF710400953309 /* TestStructural.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestStructural.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B92D6941CFF710400953309 /* TestStructural.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStructural.swift; sourceTree = "<group>"; };
+		9B92D6961CFF710400953309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B92E7781CFF72040095D7DB /* TestAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAdapter.swift; sourceTree = "<group>"; };
+		9B92E77A1CFF723B0095D7DB /* TestBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBridge.swift; sourceTree = "<group>"; };
+		9B92E77C1CFF724B0095D7DB /* TestComposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestComposite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9B583D151CFF7C5C009A8162 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B583D211CFF7C66009A8162 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B583D2D1CFF7C72009A8162 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B5EAD941CC8AC1E00FCEFBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B92D68F1CFF710400953309 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,6 +185,7 @@
 				9B1287871CFDA288006F44B5 /* TemplateMethod.swift */,
 				9B1287891CFDA297006F44B5 /* Memento.swift */,
 				9B12878B1CFDA2A4006F44B5 /* State.swift */,
+				9B0A8ED51CFEF9D600F9ED39 /* StateSingleton.swift */,
 				9B12878D1CFDA2B1006F44B5 /* Strategy.swift */,
 				9B12878F1CFDA2C0006F44B5 /* Visitor.swift */,
 				9B1287971CFDA309006F44B5 /* Mediator.swift */,
@@ -138,10 +193,41 @@
 			name = behavioral;
 			sourceTree = "<group>";
 		};
+		9B583D191CFF7C5C009A8162 /* TestBehavioral */ = {
+			isa = PBXGroup;
+			children = (
+				9B583D1A1CFF7C5C009A8162 /* TestBehavioral.swift */,
+				9B583D1C1CFF7C5C009A8162 /* Info.plist */,
+			);
+			path = TestBehavioral;
+			sourceTree = "<group>";
+		};
+		9B583D251CFF7C66009A8162 /* TestConcurrent */ = {
+			isa = PBXGroup;
+			children = (
+				9B583D261CFF7C66009A8162 /* TestConcurrent.swift */,
+				9B583D281CFF7C66009A8162 /* Info.plist */,
+			);
+			path = TestConcurrent;
+			sourceTree = "<group>";
+		};
+		9B583D311CFF7C72009A8162 /* TestCreational */ = {
+			isa = PBXGroup;
+			children = (
+				9B583D321CFF7C72009A8162 /* TestCreational.swift */,
+				9B583D341CFF7C72009A8162 /* Info.plist */,
+			);
+			path = TestCreational;
+			sourceTree = "<group>";
+		};
 		9B5EAD8E1CC8AC1E00FCEFBA = {
 			isa = PBXGroup;
 			children = (
 				9B5EAD991CC8AC1E00FCEFBA /* Patterns */,
+				9B92D6931CFF710400953309 /* TestStructural */,
+				9B583D191CFF7C5C009A8162 /* TestBehavioral */,
+				9B583D251CFF7C66009A8162 /* TestConcurrent */,
+				9B583D311CFF7C72009A8162 /* TestCreational */,
 				9B5EAD981CC8AC1E00FCEFBA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,6 +236,10 @@
 			isa = PBXGroup;
 			children = (
 				9B5EAD971CC8AC1E00FCEFBA /* Patterns */,
+				9B92D6921CFF710400953309 /* TestStructural.xctest */,
+				9B583D181CFF7C5C009A8162 /* TestBehavioral.xctest */,
+				9B583D241CFF7C66009A8162 /* TestConcurrent.xctest */,
+				9B583D301CFF7C72009A8162 /* TestCreational.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,13 +252,77 @@
 				9B12877A1CFDA1B0006F44B5 /* creational */,
 				9B1287791CFDA190006F44B5 /* structural */,
 				9B5EAD9A1CC8AC1E00FCEFBA /* main.swift */,
+				9B92BDAC1CFF2B1400032E6D /* FixedLengthArrays.swift */,
 			);
 			path = Patterns;
+			sourceTree = "<group>";
+		};
+		9B92D6931CFF710400953309 /* TestStructural */ = {
+			isa = PBXGroup;
+			children = (
+				9B92E77C1CFF724B0095D7DB /* TestComposite.swift */,
+				9B92E77A1CFF723B0095D7DB /* TestBridge.swift */,
+				9B92E7781CFF72040095D7DB /* TestAdapter.swift */,
+				9B92D6941CFF710400953309 /* TestStructural.swift */,
+				9B92D6961CFF710400953309 /* Info.plist */,
+			);
+			path = TestStructural;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9B583D171CFF7C5C009A8162 /* TestBehavioral */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B583D1F1CFF7C5C009A8162 /* Build configuration list for PBXNativeTarget "TestBehavioral" */;
+			buildPhases = (
+				9B583D141CFF7C5C009A8162 /* Sources */,
+				9B583D151CFF7C5C009A8162 /* Frameworks */,
+				9B583D161CFF7C5C009A8162 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestBehavioral;
+			productName = TestBehavioral;
+			productReference = 9B583D181CFF7C5C009A8162 /* TestBehavioral.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9B583D231CFF7C66009A8162 /* TestConcurrent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B583D291CFF7C66009A8162 /* Build configuration list for PBXNativeTarget "TestConcurrent" */;
+			buildPhases = (
+				9B583D201CFF7C66009A8162 /* Sources */,
+				9B583D211CFF7C66009A8162 /* Frameworks */,
+				9B583D221CFF7C66009A8162 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestConcurrent;
+			productName = TestConcurrent;
+			productReference = 9B583D241CFF7C66009A8162 /* TestConcurrent.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9B583D2F1CFF7C72009A8162 /* TestCreational */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B583D351CFF7C72009A8162 /* Build configuration list for PBXNativeTarget "TestCreational" */;
+			buildPhases = (
+				9B583D2C1CFF7C72009A8162 /* Sources */,
+				9B583D2D1CFF7C72009A8162 /* Frameworks */,
+				9B583D2E1CFF7C72009A8162 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestCreational;
+			productName = TestCreational;
+			productReference = 9B583D301CFF7C72009A8162 /* TestCreational.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9B5EAD961CC8AC1E00FCEFBA /* Patterns */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B5EAD9E1CC8AC1E00FCEFBA /* Build configuration list for PBXNativeTarget "Patterns" */;
@@ -186,6 +340,23 @@
 			productReference = 9B5EAD971CC8AC1E00FCEFBA /* Patterns */;
 			productType = "com.apple.product-type.tool";
 		};
+		9B92D6911CFF710400953309 /* TestStructural */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B92D6971CFF710400953309 /* Build configuration list for PBXNativeTarget "TestStructural" */;
+			buildPhases = (
+				9B92D68E1CFF710400953309 /* Sources */,
+				9B92D68F1CFF710400953309 /* Frameworks */,
+				9B92D6901CFF710400953309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestStructural;
+			productName = TestStructural;
+			productReference = 9B92D6921CFF710400953309 /* TestStructural.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,8 +367,20 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = pauljohanneskraft;
 				TargetAttributes = {
+					9B583D171CFF7C5C009A8162 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					9B583D231CFF7C66009A8162 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					9B583D2F1CFF7C72009A8162 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					9B5EAD961CC8AC1E00FCEFBA = {
 						CreatedOnToolsVersion = 7.3;
+					};
+					9B92D6911CFF710400953309 = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
@@ -214,11 +397,70 @@
 			projectRoot = "";
 			targets = (
 				9B5EAD961CC8AC1E00FCEFBA /* Patterns */,
+				9B92D6911CFF710400953309 /* TestStructural */,
+				9B583D171CFF7C5C009A8162 /* TestBehavioral */,
+				9B583D231CFF7C66009A8162 /* TestConcurrent */,
+				9B583D2F1CFF7C72009A8162 /* TestCreational */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		9B583D161CFF7C5C009A8162 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B583D221CFF7C66009A8162 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B583D2E1CFF7C72009A8162 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B92D6901CFF710400953309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		9B583D141CFF7C5C009A8162 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B583D1B1CFF7C5C009A8162 /* TestBehavioral.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B583D201CFF7C66009A8162 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B583D271CFF7C66009A8162 /* TestConcurrent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B583D2C1CFF7C72009A8162 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B583D331CFF7C72009A8162 /* TestCreational.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B5EAD931CC8AC1E00FCEFBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +478,8 @@
 				9B12879E1CFDA348006F44B5 /* Flyweight.swift in Sources */,
 				9B1287A01CFDA380006F44B5 /* Facade.swift in Sources */,
 				9B1287AC1CFDA444006F44B5 /* AbstractFactory.swift in Sources */,
+				9B0A8ED61CFEF9D600F9ED39 /* StateSingleton.swift in Sources */,
+				9B92BDAD1CFF2B1400032E6D /* FixedLengthArrays.swift in Sources */,
 				9B12878E1CFDA2B1006F44B5 /* Strategy.swift in Sources */,
 				9B1287981CFDA309006F44B5 /* Mediator.swift in Sources */,
 				9B1287A41CFDA3BA006F44B5 /* Adapter.swift in Sources */,
@@ -251,9 +495,86 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B92D68E1CFF710400953309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B92D6951CFF710400953309 /* TestStructural.swift in Sources */,
+				9B92E77D1CFF724B0095D7DB /* TestComposite.swift in Sources */,
+				9B92E77B1CFF723B0095D7DB /* TestBridge.swift in Sources */,
+				9B92E7791CFF72040095D7DB /* TestAdapter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		9B583D1D1CFF7C5C009A8162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestBehavioral/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kraft.TestBehavioral;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9B583D1E1CFF7C5C009A8162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestBehavioral/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kraft.TestBehavioral;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9B583D2A1CFF7C66009A8162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestConcurrent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kraft.TestConcurrent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9B583D2B1CFF7C66009A8162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestConcurrent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kraft.TestConcurrent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9B583D361CFF7C72009A8162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestCreational/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kraft.TestCreational;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9B583D371CFF7C72009A8162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestCreational/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kraft.TestCreational;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		9B5EAD9C1CC8AC1E00FCEFBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -351,9 +672,55 @@
 			};
 			name = Release;
 		};
+		9B92D6981CFF710400953309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestStructural/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kraft.TestStructural;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9B92D6991CFF710400953309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TestStructural/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kraft.TestStructural;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9B583D1F1CFF7C5C009A8162 /* Build configuration list for PBXNativeTarget "TestBehavioral" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B583D1D1CFF7C5C009A8162 /* Debug */,
+				9B583D1E1CFF7C5C009A8162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9B583D291CFF7C66009A8162 /* Build configuration list for PBXNativeTarget "TestConcurrent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B583D2A1CFF7C66009A8162 /* Debug */,
+				9B583D2B1CFF7C66009A8162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9B583D351CFF7C72009A8162 /* Build configuration list for PBXNativeTarget "TestCreational" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B583D361CFF7C72009A8162 /* Debug */,
+				9B583D371CFF7C72009A8162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		9B5EAD921CC8AC1E00FCEFBA /* Build configuration list for PBXProject "Patterns" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -368,6 +735,15 @@
 			buildConfigurations = (
 				9B5EAD9F1CC8AC1E00FCEFBA /* Debug */,
 				9B5EADA01CC8AC1E00FCEFBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B92D6971CFF710400953309 /* Build configuration list for PBXNativeTarget "TestStructural" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B92D6981CFF710400953309 /* Debug */,
+				9B92D6991CFF710400953309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
