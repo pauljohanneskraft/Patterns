@@ -1,13 +1,6 @@
 
 private protocol Component {}
 
-<<<<<<< HEAD
-private protocol Composite : Component {
-    var children : [Component] { get }
-}
-
-private protocol Leaf : Component {}
-=======
 private struct Composite : Component {
     var children = [Component]()
 }
@@ -20,4 +13,3 @@ private struct Leaf : Component {}
 
 
 // 2 - GUI-Elements
->>>>>>> switch-to-XCTests
