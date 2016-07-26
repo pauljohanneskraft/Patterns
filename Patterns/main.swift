@@ -9,6 +9,11 @@
 import Foundation
 
 
+
+
+
+/*
+
 func testBehavioral() {
     
     print(" - Chain Of Responsibility: ")
@@ -95,3 +100,22 @@ testCreational()
 
 print("structural: ")
 testStructural()
+
+*/
+/*
+
+
+let initState = ReadingState.read("\n")
+
+let obs1 = Observer(initState)
+let obs2 = Observer(initState)
+let obs3 = Observer(initState)
+
+var subj = Subject(state: initState, observers: [obs1, obs2, obs3])
+
+*/
+
+
+
+
+

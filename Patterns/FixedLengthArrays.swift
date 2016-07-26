@@ -1,6 +1,6 @@
 
 
-private protocol FixedLengthArrayProtocol : ArrayLiteralConvertible {
+private protocol FixedLengthArrayProtocol : ExpressibleByArrayLiteral {
     associatedtype Element
     var array : [Element?] { get set }
     var capacity : Int { get }

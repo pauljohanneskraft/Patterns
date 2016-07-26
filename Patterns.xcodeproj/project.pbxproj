@@ -32,6 +32,7 @@
 		9B1287A81CFDA421006F44B5 /* FactoryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1287A71CFDA420006F44B5 /* FactoryMethod.swift */; };
 		9B1287AA1CFDA432006F44B5 /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1287A91CFDA432006F44B5 /* Prototype.swift */; };
 		9B1287AC1CFDA444006F44B5 /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1287AB1CFDA444006F44B5 /* AbstractFactory.swift */; };
+		9B471C211D47810100DBED6C /* TemplateMethodTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B471C201D47810100DBED6C /* TemplateMethodTest.swift */; };
 		9B583D1B1CFF7C5C009A8162 /* TestBehavioral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B583D1A1CFF7C5C009A8162 /* TestBehavioral.swift */; };
 		9B583D271CFF7C66009A8162 /* TestConcurrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B583D261CFF7C66009A8162 /* TestConcurrent.swift */; };
 		9B583D331CFF7C72009A8162 /* TestCreational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B583D321CFF7C72009A8162 /* TestCreational.swift */; };
@@ -81,6 +82,8 @@
 		9B1287A71CFDA420006F44B5 /* FactoryMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FactoryMethod.swift; path = creational/FactoryMethod.swift; sourceTree = "<group>"; };
 		9B1287A91CFDA432006F44B5 /* Prototype.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Prototype.swift; path = creational/Prototype.swift; sourceTree = "<group>"; };
 		9B1287AB1CFDA444006F44B5 /* AbstractFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AbstractFactory.swift; path = creational/AbstractFactory.swift; sourceTree = "<group>"; };
+		9B471C201D47810100DBED6C /* TemplateMethodTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateMethodTest.swift; sourceTree = "<group>"; };
+		9B471C221D47BEE100DBED6C /* TempTests.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TempTests.playground; sourceTree = "<group>"; };
 		9B583D181CFF7C5C009A8162 /* TestBehavioral.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestBehavioral.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B583D1A1CFF7C5C009A8162 /* TestBehavioral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBehavioral.swift; sourceTree = "<group>"; };
 		9B583D1C1CFF7C5C009A8162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 		9B583D191CFF7C5C009A8162 /* TestBehavioral */ = {
 			isa = PBXGroup;
 			children = (
+				9B471C201D47810100DBED6C /* TemplateMethodTest.swift */,
 				9B583D1A1CFF7C5C009A8162 /* TestBehavioral.swift */,
 				9B583D1C1CFF7C5C009A8162 /* Info.plist */,
 			);
@@ -252,6 +256,7 @@
 				9B12877A1CFDA1B0006F44B5 /* creational */,
 				9B1287791CFDA190006F44B5 /* structural */,
 				9B5EAD9A1CC8AC1E00FCEFBA /* main.swift */,
+				9B471C221D47BEE100DBED6C /* TempTests.playground */,
 				9B92BDAC1CFF2B1400032E6D /* FixedLengthArrays.swift */,
 			);
 			path = Patterns;
@@ -441,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B471C211D47810100DBED6C /* TemplateMethodTest.swift in Sources */,
 				9B583D1B1CFF7C5C009A8162 /* TestBehavioral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,6 +710,7 @@
 				9B583D1E1CFF7C5C009A8162 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B583D291CFF7C66009A8162 /* Build configuration list for PBXNativeTarget "TestConcurrent" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +719,7 @@
 				9B583D2B1CFF7C66009A8162 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B583D351CFF7C72009A8162 /* Build configuration list for PBXNativeTarget "TestCreational" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +728,7 @@
 				9B583D371CFF7C72009A8162 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B5EAD921CC8AC1E00FCEFBA /* Build configuration list for PBXProject "Patterns" */ = {
 			isa = XCConfigurationList;
