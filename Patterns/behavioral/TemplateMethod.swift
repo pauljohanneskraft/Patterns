@@ -15,26 +15,34 @@ extension Abstract {
 
 // example 1: Document Application
 
-protocol Document {
+private protocol Document {
     func open()
 }
 
-private protocol Application {
-    func canOpenFile(_ f: String) -> Bool
-    func createDocument(_ f: String) -> Document
-    func aboutToOpenDocument(_ d: Document)
+private protocol DocumentApplication {
+    associatedtype D : Document
+    func canOpen(file: String) -> Bool
+    func create(doc: String) -> D
+    func aboutToOpen(doc: D)
 }
 
-extension Application {
+extension DocumentApplication {
     func openDocument(_ f: String) {
-        if (canOpenFile(f)) {
-            let d = createDocument(f)
-            aboutToOpenDocument(d)
+        if canOpen(file: f) {
+            let d = create(doc: f)
+            aboutToOpen(doc: d)
             d.open()
         }
     }
 }
 
+private struct PDFDoc : Document { func open() { print("PDF has been opened") } }
+
+private struct PDFClient : DocumentApplication {
+    func canOpen(file: String) -> Bool { return true }
+    func create(doc: String) -> PDFDoc { return PDFDoc() }
+    func aboutToOpen(doc: PDFDoc) { print("about to open PDF") }
+}
 
 // example 2: TestCase
 
@@ -47,11 +55,8 @@ private protocol TestCase {
 extension TestCase {
     func run() {
         setUp()
-        do {
-            try runTest()
-        } catch let e {
-            print(e)
-        }
+        do { try runTest() }
+        catch let e { print(e) }
         tearDown()
     }
 }
