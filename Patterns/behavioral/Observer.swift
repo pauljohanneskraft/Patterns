@@ -12,7 +12,7 @@ private protocol Observer : StateObject {
 }
 
 extension Observer {
-    mutating func update < S : Subject where S.State == Self.State > (sub: S) {
+    mutating final func update < S : Subject where S.State == Self.State > (sub: S) {
         self.state = sub.state
         updateOccurred()
     }
