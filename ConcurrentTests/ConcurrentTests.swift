@@ -7,29 +7,28 @@
 //
 
 import XCTest
+import Patterns
 
 class ConcurrentTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+
+    func testBarrier() {
+        let c = 10
+        var barrier = Barrier(count: c)
+        let group = DispatchGroup()
+        barrier = Barrier(count: c)
+        var j = 0
+        for i in 0..<c {
+            DispatchQueue(label: "Thread \(i) by Patterns").async {
+                group.enter()
+                print("Thread \(i) starts waiting.")
+                barrier.wait()
+                print("Thread \(i) stops waiting.")
+                j += 1
+                group.leave()
+            }
         }
+        _ = group.wait(timeout: DispatchTime(uptimeNanoseconds: 1 << 45))
+        XCTAssert(j == c)
     }
     
 }
