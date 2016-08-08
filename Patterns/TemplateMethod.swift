@@ -21,16 +21,16 @@ private protocol Document {
 
 private protocol DocumentApplication {
     associatedtype D : Document
-    func canOpen(file: String) -> Bool
-    func create(doc: String) -> D
-    func aboutToOpen(doc: D)
+    func canOpen(_ file: String) -> Bool
+    func create(_ doc: String) -> D
+    func aboutToOpen(_ doc: D)
 }
 
 extension DocumentApplication {
     func openDocument(_ f: String) {
-        if canOpen(file: f) {
-            let d = create(doc: f)
-            aboutToOpen(doc: d)
+        if canOpen(f) {
+            let d = create(f)
+            aboutToOpen(d)
             d.open()
         }
     }
@@ -39,9 +39,9 @@ extension DocumentApplication {
 private struct PDFDoc : Document { func open() { print("PDF has been opened") } }
 
 private struct PDFClient : DocumentApplication {
-    func canOpen(file: String) -> Bool { return true }
-    func create(doc: String) -> PDFDoc { return PDFDoc() }
-    func aboutToOpen(doc: PDFDoc) { print("about to open PDF") }
+    func canOpen(_ file: String) -> Bool { return true }
+    func create(_ doc: String) -> PDFDoc { return PDFDoc() }
+    func aboutToOpen(_ doc: PDFDoc) { print("about to open PDF") }
 }
 
 // example 2: TestCase

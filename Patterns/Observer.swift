@@ -12,7 +12,7 @@ private protocol Observer : StateObject {
 }
 
 extension Observer {
-    mutating final func update < S : Subject where S.State == Self.State > (sub: S) {
+    mutating final func update < S : Subject where S.State == Self.State > (_ sub: S) {
         self.state = sub.state
         updateOccurred()
     }
@@ -26,13 +26,13 @@ private protocol Subject : StateObject {
 
 // when the State-Types are the same, observers can subscribe to subject, as well as they can be notified
 extension Subject where O.State == Self.State {
-    mutating func subscribe(obs: O) {
+    mutating func subscribe(_ obs: O) {
         observers.append(obs)
     }
     
     mutating func notify() {
         for i in observers.indices {
-            observers[i].update(sub: self)
+            observers[i].update(self)
         }
     }
 }
@@ -76,7 +76,7 @@ private struct ReadingObserver : Observer {
 public func testReader() {
     var reader = Reader()
     
-    reader.subscribe(obs: ReadingObserver())
+    reader.subscribe(ReadingObserver())
     
     var string = ""
     

@@ -13,7 +13,7 @@ private protocol BuilderProtocol {
     associatedtype P : Product
     var product : P { get set }
     init()
-    mutating func set(property: P.PropertyType)
+    mutating func set(_ property: P.PropertyType)
 }
 
 private struct Builder<P where P : Product> : BuilderProtocol {
@@ -21,7 +21,7 @@ private struct Builder<P where P : Product> : BuilderProtocol {
     init() {
         product = P()
     }
-    mutating func set(property: P.PropertyType) {
+    mutating func set(_ property: P.PropertyType) {
         product.property = property
     }
 }

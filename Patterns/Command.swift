@@ -7,7 +7,7 @@ private protocol SwitchType {
     var history : [_Command] { get set }
 }
 extension SwitchType {
-    mutating func storeAndExecute(cmd: _Command) {
+    mutating func storeAndExecute(_ cmd: _Command) {
         history.append(cmd)
         cmd.execute()
     }
@@ -75,8 +75,8 @@ private func commandDemo1(_ args: [String]) {
     var mySwitch = Switch();
     
     for v in args {
-             if v == "ON"  { mySwitch.storeAndExecute(cmd: switchUp  ) }
-        else if v == "OFF" { mySwitch.storeAndExecute(cmd: switchDown) }
+             if v == "ON"  { mySwitch.storeAndExecute(switchUp  ) }
+        else if v == "OFF" { mySwitch.storeAndExecute(switchDown) }
              else { return }
     }
 }

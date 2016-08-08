@@ -1,14 +1,14 @@
 //
-//  TestBehavioral.swift
-//  TestBehavioral
+//  ConcurrentTests.swift
+//  ConcurrentTests
 //
-//  Created by Paul Kraft on 01.06.16.
+//  Created by Paul Kraft on 08.08.16.
 //  Copyright © 2016 pauljohanneskraft. All rights reserved.
 //
 
 import XCTest
 
-class TestBehavioral: XCTestCase {
+class ConcurrentTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -27,7 +27,7 @@ class TestBehavioral: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

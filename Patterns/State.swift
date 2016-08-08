@@ -1,16 +1,27 @@
 
-
+/*
 private protocol State {
-    func op()
+    associatedtype Operand
+    associatedtype Result
+    func op(state: inout Self, operand: Operand) -> Result
 }
 
 private protocol Context {
-    var state : State { get set }
+    associatedtype S : State
+    var state : S { get set }
 }
+
+extension Context {
+    func op(_ operand: S.Operand) -> S.Result {
+        return state.op(state: &state, operand: operand)
+    }
+}
+ */
 
 // examples:
 // 1 - Strings
 
+/*
 private protocol _State {
     mutating func writeName(context : inout _Context, name: String)
 }
@@ -37,8 +48,10 @@ private struct StateMultipleUpperCase : _State {
     }
     
 }
+ */
 // The context class has a state variable that it instantiates in an initial state, in this case StateLowerCase. In its method, it uses the corresponding methods of the state object.
 
+/*
 private struct _Context {
     var state : _State
     
@@ -64,7 +77,7 @@ private func demo() {
     context.writeName("Sunday")
 }
 
-
+*/
 
 
 
