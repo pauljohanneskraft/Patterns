@@ -1,0 +1,6 @@
+{
+  "name": "Patterns",
+  "tagline": "Collection of patterns",
+  "body": "# Patterns [![Build Status](https://travis-ci.org/pauljohanneskraft/Patterns.svg?branch=master)](https://travis-ci.org/pauljohanneskraft/Patterns)\r\n\r\nthis is a repository about patterns.\r\nMost of them are part of the EIST (\"Einführung in die Softwaretechnik\" - Introduction to Software Engineering) or GAD (\"Grundlagen: Algorithmen und Datenstrukturen\" - Fundamentals of algorithms and data structures) lectures at Technical University of Munich.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
