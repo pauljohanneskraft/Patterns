@@ -75,9 +75,9 @@ private func commandDemo1(_ args: [String]) {
     var mySwitch = Switch();
     
     for v in args {
-             if v == "ON"  { mySwitch.storeAndExecute(switchUp  ) }
-        else if v == "OFF" { mySwitch.storeAndExecute(switchDown) }
-             else { return }
+             if v == "ON"	{ mySwitch.storeAndExecute(switchUp  ) }
+        else if v == "OFF"	{ mySwitch.storeAndExecute(switchDown) }
+		else				{ return }
     }
 }
 

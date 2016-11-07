@@ -1,6 +1,42 @@
 
-private protocol Request {}
+private protocol Request {
+	associatedtype Result
+}
 
+private protocol Handler {
+	associatedtype R : Request
+	var successor	: Self?							{ get }
+	var isAllowed	: (_ request: R) -> Bool		{ get }
+	var manage		: (_ request: R) -> R.Result	{ get }
+}
+
+extension Handler {
+	public func process(_ request: R) -> R.Result? {
+		if isAllowed(request)		{ return manage(request)				}
+		else if successor == nil	{ return nil							}
+		else						{ return successor!.process(request)	}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// before:
+// private protocol Request {}
+/*
 private protocol Role {
     var successor: Any? { get }
     func isAllowed(_ request: Request) -> Bool
@@ -25,6 +61,36 @@ extension Role {
         }
     }
 }
+
+*/
+
+private struct PurchaseRequest : Request {
+	fileprivate typealias Result = Int
+}
+
+private final class PurchaseHandler : Handler {
+	init(successor: PurchaseHandler? = nil) {
+		self.successor = successor
+	}
+	
+	var successor	: PurchaseHandler?
+	
+	func isAllowed	(_ request: PurchaseRequest) -> Bool {
+		return true
+	}
+
+	func manage		(_ request: PurchaseRequest) -> PurchaseRequest.Result {
+		return 0
+	}
+}
+
+
+
+
+/*
+
+
+
 
 // examples:
 // 1 - company
@@ -108,5 +174,5 @@ func chainOfResponsibilityDemo() {
     print("Demo 1: Manager")
     chainOfResponsibilityDemo1()
 }
-
+*/
 
